@@ -1,0 +1,40 @@
+<nav class="navbar navbar-expand-md navbar-light bg-light">
+  <a class="navbar-brand" href="#">Angular Flavors</a>
+  <button
+    class="navbar-toggler" type="button"
+    data-toggle="collapse" data-target="#navbarNav"
+    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"
+    (click)="isCollapsed = !isCollapsed">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="collapseBasic" [collapse]="isCollapsed">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item" routerLinkActive="active">
+        <a class="nav-link"
+          [routerLink]="['/recipes']"
+          (click)="isNavbarCollapsed = true">Recipes</a>
+      </li>
+      <li class="nav-item" routerLinkActive="active">
+        <a class="nav-link"
+          [routerLink]="['/shopping-list']"
+          (click)="isNavbarCollapsed = true">Shopping List</a>
+      </li>
+    </ul>
+
+    <ul class="navbar-nav">
+      <li class="btn-group float-right" dropdown>
+        <button
+          id="button-basic" dropdownToggle type="button"
+          class="btn btn-outline-primary dropdown-toggle"
+          aria-controls="dropdown-basic">
+          Manage <span class="caret"></span>
+        </button>
+        <ul id="dropdown-basic" *dropdownMenu class="dropdown-menu" role="menu" aria-labelledby="button-basic">
+          <li role="menuitem"><a class="dropdown-item" href="#">Save Data</a></li>
+          <li role="menuitem"><a class="dropdown-item" href="#">Fetch Data</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</nav>
