@@ -5,15 +5,13 @@ import { ShoppingListService } from '../shopping-list/shopping-list.service';
 
 import { Recipe } from './recipe.model';
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable({ providedIn: 'root' })
 export class RecipeService {
 
   private recipes: Recipe[] = [
     new Recipe(
       'Tasty Schnitzel',
-      'A super-tasty Schnitzel - just awesome!',
+      'A super-tasty Schnitzel',
       'https://upload.wikimedia.org/wikipedia/commons/7/72/Schnitzel.JPG',
       [
         new Ingredient('Meat', 1),

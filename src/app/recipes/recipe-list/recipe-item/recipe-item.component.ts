@@ -8,7 +8,9 @@ import { Recipe } from '../../recipe.model';
   styleUrls: ['./recipe-item.component.scss']
 })
 export class RecipeItemComponent {
+
   @Input() recipe: Recipe;
+
   @Input() index: number;
 
 }

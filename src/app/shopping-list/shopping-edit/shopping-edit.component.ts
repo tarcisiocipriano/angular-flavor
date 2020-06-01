@@ -11,6 +11,7 @@ import { Subscription } from 'rxjs';
   styleUrls: ['./shopping-edit.component.scss']
 })
 export class ShoppingEditComponent implements OnInit, OnDestroy {
+
   @ViewChild('f', { static: false }) shoppingListForm: NgForm;
 
   updateMode = false;
@@ -30,7 +31,6 @@ export class ShoppingEditComponent implements OnInit, OnDestroy {
         this.ingredientSelected = this.slService.getIngredient(index);
         this.ingredientSelectedIndex = index;
 
-        // set the form
         this.shoppingListForm.setValue({
           name: this.ingredientSelected.name,
           amount: this.ingredientSelected.amount
