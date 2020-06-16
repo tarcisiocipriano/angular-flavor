@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app.routing';
 
@@ -31,11 +31,12 @@ import { CollapseModule } from 'ngx-bootstrap/collapse';
     RecipeStartComponent,
     ShoppingListComponent,
     ShoppingEditComponent,
-    RecipeEditComponent
+    RecipeEditComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule,
+    ReactiveFormsModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     BsDropdownModule.forRoot(),
