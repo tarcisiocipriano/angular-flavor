@@ -33,8 +33,8 @@
             Manage <span class="caret"></span>
           </button>
           <ul id="dropdown-basic" *dropdownMenu class="dropdown-menu" role="menu" aria-labelledby="button-basic">
-            <li role="menuitem"><a class="dropdown-item" href="#">Save Data</a></li>
-            <li role="menuitem"><a class="dropdown-item" href="#">Fetch Data</a></li>
+            <li role="menuitem"><a class="dropdown-item" style="cursor: pointer;" (click)="onSaveData()">Save Data</a></li>
+            <li role="menuitem"><a class="dropdown-item" style="cursor: pointer;" (click)="onFetchData()">Fetch Data</a></li>
           </ul>
         </li>
       </ul>
