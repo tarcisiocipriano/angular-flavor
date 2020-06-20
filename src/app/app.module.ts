@@ -5,34 +5,19 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app.routing';
 
-
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
-import { RecipesComponent } from './recipes/recipes.component';
-import { RecipeListComponent } from './recipes/recipe-list/recipe-list.component';
-import { RecipeDetailComponent } from './recipes/recipe-detail/recipe-detail.component';
-import { RecipeItemComponent } from './recipes/recipe-list/recipe-item/recipe-item.component';
-import { ShoppingListComponent } from './shopping-list/shopping-list.component';
-import { ShoppingEditComponent } from './shopping-list/shopping-edit/shopping-edit.component';
-import { RecipeStartComponent } from './recipes/recipe-start/recipe-start.component';
-import { RecipeEditComponent } from './recipes/recipe-edit/recipe-edit.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CollapseModule } from 'ngx-bootstrap/collapse';
+import { RecipesModule } from './recipes/recipes.module';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { ButtonsModule } from 'ngx-bootstrap/buttons';
-import { CollapseModule } from 'ngx-bootstrap/collapse';
+import { ShoppingListModule } from './shopping-list/shopping-list.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent,
-    RecipesComponent,
-    RecipeListComponent,
-    RecipeDetailComponent,
-    RecipeItemComponent,
-    RecipeStartComponent,
-    ShoppingListComponent,
-    ShoppingEditComponent,
-    RecipeEditComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
@@ -44,6 +29,8 @@ import { CollapseModule } from 'ngx-bootstrap/collapse';
     BsDropdownModule.forRoot(),
     ButtonsModule.forRoot(),
     CollapseModule.forRoot(),
+    RecipesModule,
+    ShoppingListModule
   ],
   providers: [],
   bootstrap: [AppComponent]
