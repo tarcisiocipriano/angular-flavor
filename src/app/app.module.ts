@@ -8,11 +8,9 @@ import { AppRoutingModule } from './app.routing';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { CollapseModule } from 'ngx-bootstrap/collapse';
 import { RecipesModule } from './recipes/recipes.module';
-import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
-import { ButtonsModule } from 'ngx-bootstrap/buttons';
 import { ShoppingListModule } from './shopping-list/shopping-list.module';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -20,15 +18,13 @@ import { ShoppingListModule } from './shopping-list/shopping-list.module';
     HeaderComponent
   ],
   imports: [
+    SharedModule,
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    BsDropdownModule.forRoot(),
-    ButtonsModule.forRoot(),
-    CollapseModule.forRoot(),
     RecipesModule,
     ShoppingListModule
   ],

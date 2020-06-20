@@ -1,10 +1,6 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
-
-import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
-import { ButtonsModule } from 'ngx-bootstrap/buttons';
 
 import { RecipesRoutingModule } from './recipes.routing';
 import { RecipeEditComponent } from './recipe-edit/recipe-edit.component';
@@ -13,6 +9,7 @@ import { RecipeListComponent } from './recipe-list/recipe-list.component';
 import { RecipeDetailComponent } from './recipe-detail/recipe-detail.component';
 import { RecipeItemComponent } from './recipe-list/recipe-item/recipe-item.component';
 import { RecipeStartComponent } from './recipe-start/recipe-start.component';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -24,12 +21,10 @@ import { RecipeStartComponent } from './recipe-start/recipe-start.component';
     RecipeEditComponent
   ],
   imports: [
-    CommonModule,
+    SharedModule,
     ReactiveFormsModule,
     RouterModule,
-    RecipesRoutingModule,
-    BsDropdownModule.forRoot(),
-    ButtonsModule.forRoot(),
+    RecipesRoutingModule
   ]
 })
 export class RecipesModule { }
