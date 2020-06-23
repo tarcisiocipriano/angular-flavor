@@ -13,14 +13,13 @@
     <div class="collapse navbar-collapse" id="collapseBasic">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item" routerLinkActive="active">
-          <a class="nav-link"
-            [routerLink]="['/recipes']"
-            (click)="isNavbarCollapsed = true">Recipes</a>
+          <a class="nav-link" routerLink="/auth" (click)="isNavbarCollapsed = true">Authenticate</a>
         </li>
         <li class="nav-item" routerLinkActive="active">
-          <a class="nav-link"
-            [routerLink]="['/shopping-list']"
-            (click)="isNavbarCollapsed = true">Shopping List</a>
+          <a class="nav-link" routerLink="/recipes" (click)="isNavbarCollapsed = true">Recipes</a>
+        </li>
+        <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link" routerLink="/shopping-list" (click)="isNavbarCollapsed = true">Shopping List</a>
         </li>
       </ul>
 
